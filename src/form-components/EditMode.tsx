@@ -9,29 +9,35 @@ export function EditMode(): React.JSX.Element {
     return (
         <div>
             <h3>Edit Mode</h3>
-            <Form.Check
+            <Form.Check //switch toggle
                 type="switch"
                 id="edit-mode-switch"
                 label="Edit Mode"
                 checked={editMode}
-                onChange={(event) => {setEditMode(event.target.checked)}}
+                onChange={(event) => {
+                    setEditMode(event.target.checked);
+                }}
             />
-            {editMode ?
+            {editMode ?  //if on editmode, show all labels. if not, just show name and if student
                 <div>
                     <Form.Group controlId="nameInput">
                         <Form.Label>Name:</Form.Label>
                         <Form.Control
                             type="text"
                             value={name}
-                            onChange={(e) => {setName(e.target.value)}}
+                            onChange={(e) => {
+                                setName(e.target.value);
+                            }}
                         />
                     </Form.Group>
-                    <Form.Check
+                    <Form.Check //check if student
                         type="checkbox"
                         id="student-check"
                         label="Student?"
                         checked={isStudent}
-                        onChange={(event) => {setIsStudent(event.target.checked)}}
+                        onChange={(event) => {
+                            setIsStudent(event.target.checked);
+                        }}
                     />
                 </div>
             :   <p>

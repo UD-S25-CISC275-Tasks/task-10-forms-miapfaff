@@ -15,7 +15,7 @@ export function MultipleChoiceQuestion({
             <h3>Multiple Choice Question</h3>
             <Form.Group controlId="multipleChoiceSelect">
                 <Form.Label>Select an answer:</Form.Label>
-                <Form.Select
+                <Form.Select //dropdown
                     value={selectedChoice}
                     onChange={(e) => {setSelectedChoice(e.target.value)}}
                 >
